@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>程序员躲避BUG游戏</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: #000000;
+            color: #00FF00;
+            font-family: 'Courier New', monospace;
+        }
+        #gameCanvas {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+        /* 游戏开始画面样式 */
+        #startScreen {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 10;
+        }
+        .levelButton {
+            padding: 10px 20px;
+            font-size: 20px;
+            cursor: pointer;
+            margin-top: 20px;
+            background-color: #000000;
+            color: #00FF00;
+            border: 2px solid #00FF00;
+            font-family: 'Courier New', monospace;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: all 0.3s ease;
+        }
+        .levelButton:hover {
+            background-color: #00FF00;
+            color: #000000;
+        }
+        h1 {
+            font-size: 36px;
+            text-shadow: 0 0 10px #00FF00;
+            letter-spacing: 3px;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="gameCanvas"></canvas>
+    <div id="startScreen">
+        <h1>程序员之从入门到跑路</h1>
+        <button id="level1Button" class="levelButton">第一关</button>
+        <button id="level2Button" class="levelButton">第二关</button>
+        <button id="level3Button" class="levelButton">第三关</button>
+    </div>
+    <!-- 按顺序引入脚本 -->
+    <script src="utils.js"></script>
+    <script src="programmer.js"></script>
+    <script src="bug.js"></script>
+    <script src="productManager.js"></script>
+    <script src="boss.js"></script>
+    <script src="main.js"></script>
+    <!-- 删除 game.js 和 boss.js 的引入 -->
+    <!-- <script src="game.js"></script>
+    <script src="boss.js"></script> -->
+    <!-- 重新引入 boss.js 脚本 -->
+    
+</body>
+</html>
